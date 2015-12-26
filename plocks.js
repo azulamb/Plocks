@@ -14,18 +14,7 @@ exports.PlockConfig = PlockConfig;
 },{}],2:[function(require,module,exports){
 var p = require('./plocks');
 Plocks = p.Plocks;
-},{"./plocks":4}],3:[function(require,module,exports){
-var Plock = (function () {
-    function Plock() {
-    }
-    Plock.create = function () {
-        return new Plock();
-    };
-    return Plock;
-})();
-exports.Plock = Plock;
-
-},{}],4:[function(require,module,exports){
+},{"./plocks":3}],3:[function(require,module,exports){
 var pc = require('./config');
 var Plocks = (function () {
     function Plocks(areaId, conf) {
@@ -44,4 +33,4 @@ var Plocks = (function () {
 })();
 exports.Plocks = Plocks;
 
-},{"./config":1}]},{},[2,4,1,3]);
+},{"./config":1}]},{},[2]);

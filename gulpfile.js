@@ -10,9 +10,8 @@ var config =
 	src: [ './src/*.ts' ],
 	dst: './build',
 	out: 'plocks.js',
-	outmin: 'plocks.js',
 	options: { target: 'ES5', module: 'commonjs', sortOutput: true },
-	entries: { entries: [ 'build/main.js', './build/plocks.js', './build/config.js', './build/plock.js' ] }
+	entries: { entries: [ 'build/main.js' ] }
 };
 
 gulp.task( 'typescipt', function ()
@@ -31,7 +30,7 @@ gulp.task( 'copy', function ()
 		.pipe( gulp.dest( config.dst ) );
 });
 
-gulp.task( 'build', [ 'typescipt', 'copy' ],function()
+gulp.task( 'build', [ 'typescipt', 'copy' ], function()
 {
 	return browserify( config.entries )
 		.bundle()
