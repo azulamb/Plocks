@@ -1,0 +1,30 @@
+{
+  "name": "Plocks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "plocks.js",
+  "scripts": {
+    "build": "gulp build",
+    "release": "gulp release",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HirokiMiyaoka/Plocks.git"
+  },
+  "keywords": [
+    "Plocks"
+  ],
+  "author": "Hiroki",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HirokiMiyaoka/Plocks/issues"
+  },
+  "homepage": "https://github.com/HirokiMiyaoka/Plocks",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-typescript": "^2.10.0",
+    "gulp-uglify": "^1.5.1"
+  }
+}
