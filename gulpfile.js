@@ -4,6 +4,7 @@ var rename = require( 'gulp-rename' );
 var browserify = require( 'browserify' );
 var source = require( 'vinyl-source-stream' );
 var uglify = require( 'gulp-uglify' );
+var cssmin = require('gulp-cssmin');
 
 var config =
 {
@@ -38,7 +39,17 @@ gulp.task( 'build', [ 'typescipt', 'copy' ], function()
 		.pipe( gulp.dest( './' ) );
 });
 
-gulp.task( 'release', [ 'build' ], function ()
+gulp.task( 'css', function()
+{
+	return gulp
+		.src( 'plocks.css' )
+        .pipe( cssmin() )
+		.pipe( rename( { extname: '.min.css' } ) )
+		.pipe( gulp.dest( './' ) );
+});
+
+
+gulp.task( 'release', [ 'build', 'css' ], function ()
 {
 	return gulp
 		.src( config.out )

@@ -1,0 +1,34 @@
+.PlockOvelay {
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background-color: rgba( 0, 0, 0, 0.5 );
+}
+
+.PlockStyleList {
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.PlockStyleList:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.PlockStyle {
+	overflow: hidden;
+	display: block;
+	width: 200px;
+	height: 200px;
+	border-radius: 10px;
+	float: left;
+	margin: 10px;
+	padding: 0px;
+	background-color: rgba( 0, 0, 0, 0.5 );
+}
