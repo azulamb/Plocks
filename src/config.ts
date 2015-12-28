@@ -1,4 +1,5 @@
 import ps = require('./style');
+import api = require('./api');
 
 export class PlockConfig
 {
@@ -6,7 +7,7 @@ export class PlockConfig
 	private size: number;
 	private style: ps.PlockStyle; // Plock base style. Class name is "PlockStyle".
 
-	private server: string;
+	private server: api.PlockAPI;
 
 	private area: HTMLElement; // Plocks area.
 	private overlay: HTMLElement; // Plocks overray area.
@@ -23,6 +24,9 @@ export class PlockConfig
 
 		// Style
 		this.style = new ps.PlockStyle( this, <CSSStyleSheet>document.styleSheets[ 0 ] );
+
+		// Server
+		this.server = new api.PlockAPI( conf.server );
 	}
 
 	public isFixedPlockSize(): boolean { return this.fixsize; }
