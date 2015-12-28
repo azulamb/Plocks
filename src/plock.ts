@@ -1,4 +1,5 @@
-export class Plock{
+export class Plock
+{
 	static create( content: string = null, style: CSSStyleDeclaration = undefined ): Plock
 	{
 		return new Plock( content, style );

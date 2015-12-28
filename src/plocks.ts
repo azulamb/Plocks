@@ -2,7 +2,7 @@ import p = require( './plock' );
 import pc = require( './config' );
 
 export class Plocks
- {
+{
 	static create( areaId: string, conf: any = {} ): Plocks
 	{
 		return new Plocks( areaId, conf);
@@ -20,7 +20,9 @@ export class Plocks
 		this.list.push(p.Plock.create());
 		this.list.push(p.Plock.create());
 
-		this.render();
+		this.config.getServer().getList( { page: 0 },
+			() => { this.render(); },
+			() => {});
 	}
 
 	public render()

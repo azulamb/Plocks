@@ -36,6 +36,8 @@ export class PlockConfig
 	public getOverray(): HTMLElement { return this.overlay; }
 	public getPlockList(): HTMLElement { return this.plist; }
 
+	public getServer(): api.PlockAPI { return this.server; }
+
 	private addOverlay()
 	{
 		this.overlay = document.createElement( 'div' );
