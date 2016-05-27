@@ -8,7 +8,7 @@ var cssmin = require('gulp-cssmin');
 
 var config =
 {
-	src: [ './src/*.ts' ],
+	src: [ './src/plocks.ts' ],
 	dst: './build',
 	out: 'plocks.js',
 	options: { target: 'ES5', module: 'commonjs', sortOutput: true },

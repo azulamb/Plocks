@@ -26,7 +26,7 @@ export class PlockConfig
 		this.style = new ps.PlockStyle( this, <CSSStyleSheet>document.styleSheets[ 0 ] );
 
 		// Server
-		this.server = new api.PlockAPI( conf.server );
+		this.server = new api.PlockAPI( conf );
 	}
 
 	public isFixedPlockSize(): boolean { return this.fixsize; }

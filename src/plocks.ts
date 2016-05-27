@@ -11,18 +11,19 @@ export class Plocks
 	private config: pc.PlockConfig;
 	private list: p.Plock[];
 
-	constructor( areaId: string, conf: any = {} )
+	constructor( areaId: string, mdparser: ( string ) => string, conf: any = {} )
 	{
 		this.config = new pc.PlockConfig( areaId, conf );
 		this.list = new Array<p.Plock>();
 
-		this.list.push(p.Plock.create());
-		this.list.push(p.Plock.create());
-		this.list.push(p.Plock.create());
-
 		this.config.getServer().getList( { page: 0 },
 			() => { this.render(); },
 			() => {});
+	}
+
+	public push( content: string )
+	{
+		this.list.push( p.Plock.create( content ) );
 	}
 
 	public render()
